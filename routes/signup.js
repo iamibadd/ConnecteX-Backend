@@ -5,9 +5,9 @@ const bcrypt = require('bcryptjs')
 router.post('', async (req, res) => {
     console.log(req.body)
     const {error} = signup_validation(req.body)
-    if (error) return res.status(404).send(error.details[0].message)
-    if (await Signup.findOne({username: req.body.username})) return res.status(400).send('Username already exist.')
-    if (await Signup.findOne({email: req.body.email})) return res.status(400).send('Email already exist.')
+    if (error) return res.status(404).json(error.details[0].message)
+    if (await Signup.findOne({username: req.body.username})) return res.status(400).json('Username already exist.')
+    if (await Signup.findOne({email: req.body.email})) return res.status(400).json('Email already exist.')
     const salt = await bcrypt.genSalt(10)
     const hashPassword = await bcrypt.hash(req.body.password, salt)
     const user = new Signup({

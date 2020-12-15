@@ -10,4 +10,4 @@ mongoose.connect(process.env.DB_CONNECTION,
     })
 app.use(express.json())
 app.use('/register', signupRoutes)
-app.listen(3000)
+app.listen(5000)
