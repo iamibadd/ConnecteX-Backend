@@ -4,9 +4,10 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const verify_token = require('../validation/validateToken')
 const {login_validation} = require('../validation/login')
-router.get('/user/:username', verify_token, async (req, res) => {
+router.post('/user/:username', verify_token, async (req, res) => {
+    if (req.body.user !== req.params['username']) return res.status(401).json({'message': 'Unauthorized user!'})
     try {
-        const users = await Signup.find({username: req.params['username']})
+        const users = await Signup.findOne({username: req.params['username']})
         console.log(req.user)
         res.status(200).json(users)
     } catch (e) {

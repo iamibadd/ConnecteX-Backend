@@ -2,7 +2,7 @@ const Joi = require('@hapi/joi')
 
 const login_validation = body => {
     const schema = Joi.object({
-        username: Joi.string().min(3).required(),
+        username: Joi.string().required(),
         password: Joi.string().required()
     })
     return schema.validate(body)
