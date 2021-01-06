@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT Authentication added!">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="Commiting changes for learning purposes">
       <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,7 @@
       <workItem from="1609277117845" duration="1104000" />
       <workItem from="1609795210220" duration="62000" />
       <workItem from="1609795339210" duration="12000" />
-      <workItem from="1609950474074" duration="720000" />
+      <workItem from="1609950474074" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
@@ -86,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609103193262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commiting changes for learning purposes">
+      <created>1609951377736</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609951377736</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +112,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="JWT Authentication added!" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT Authentication added!" />
+    <MESSAGE value="Commiting changes for learning purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commiting changes for learning purposes" />
   </component>
 </project>
