@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 const Signup = mongoose.Schema({
     first_name: {type: String, required: true},
     last_name: {type: String, required: true},

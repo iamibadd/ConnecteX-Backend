@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="Commiting changes for learning purposes">
-      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/login.js" afterDir="false" />
+    <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
+      <change afterPath="$PROJECT_DIR$/src/routes/login.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/signup.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fyp-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fyp-backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/validateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validateToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +43,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.13" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/validation" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend\utils" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend\validation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend\src" />
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -61,7 +77,18 @@
       <workItem from="1609277117845" duration="1104000" />
       <workItem from="1609795210220" duration="62000" />
       <workItem from="1609795339210" duration="12000" />
-      <workItem from="1609950474074" duration="1095000" />
+      <workItem from="1609950474074" duration="1142000" />
+      <workItem from="1610360519769" duration="15000" />
+      <workItem from="1610365552211" duration="80000" />
+      <workItem from="1610570881609" duration="1667000" />
+      <workItem from="1612122702099" duration="30000" />
+      <workItem from="1612209378898" duration="820000" />
+      <workItem from="1616023450884" duration="3456000" />
+      <workItem from="1616040876214" duration="1302000" />
+      <workItem from="1616233815657" duration="2828000" />
+      <workItem from="1616249976763" duration="8000" />
+      <workItem from="1622388011971" duration="6310000" />
+      <workItem from="1622394392728" duration="6032000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
@@ -91,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609951377736</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JWT authentication added!">
+      <created>1609951600945</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609951600945</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +147,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="JWT Authentication added!" />
     <MESSAGE value="Commiting changes for learning purposes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commiting changes for learning purposes" />
+    <MESSAGE value="JWT authentication added!" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT authentication added!" />
   </component>
 </project>

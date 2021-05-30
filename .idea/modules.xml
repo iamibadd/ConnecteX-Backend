@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fyp-backend.iml" filepath="$PROJECT_DIR$/.idea/fyp-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fyp-frontend/.idea/fyp-frontend.iml" filepath="$PROJECT_DIR$/../fyp-frontend/.idea/fyp-frontend.iml" />
     </modules>
   </component>
 </project>
