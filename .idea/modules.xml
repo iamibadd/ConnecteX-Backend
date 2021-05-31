@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/fyp-backend.iml" filepath="$PROJECT_DIR$/.idea/fyp-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/../fyp-frontend/.idea/fyp-frontend.iml" filepath="$PROJECT_DIR$/../fyp-frontend/.idea/fyp-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kidsroutinescheduler/.idea/kidsroutinescheduler.iml" filepath="$PROJECT_DIR$/../kidsroutinescheduler/.idea/kidsroutinescheduler.iml" />
     </modules>
   </component>
 </project>

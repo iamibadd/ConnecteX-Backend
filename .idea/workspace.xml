@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
-      <change afterPath="$PROJECT_DIR$/src/routes/login.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/signup.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fyp-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fyp-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validation/validateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/validateToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/login.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/signup.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/signup.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/users.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/login.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/signup.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../kidsroutinescheduler" />
   </component>
   <component name="ProjectId" id="1lemkAf6PtQNyBkIyIGSKEhkqvn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,13 +54,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fyp-frontend/Final-Year-Project-Connectex/src/utils" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\Final-Year-Project-Connectex\src\utils" />
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\Final-Year-Project-Connectex\src\components\user" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend\utils" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-backend\validation" />
     </key>
@@ -88,7 +100,8 @@
       <workItem from="1616233815657" duration="2828000" />
       <workItem from="1616249976763" duration="8000" />
       <workItem from="1622388011971" duration="6310000" />
-      <workItem from="1622394392728" duration="6032000" />
+      <workItem from="1622394392728" duration="6427000" />
+      <workItem from="1622422842975" duration="13537000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>

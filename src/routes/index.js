@@ -1,19 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const Login = require('./login.route');
-const Signup = require('./signup.route');
+const Admin = require('./admin.route');
 const User = require('./users.route');
 const Instagram = require('./instagram.route');
 const Facebook = require('./facebook.route');
 
 const defaultRoutes = [
 	{
-		path: '/login',
-		route: Login,
-	},
-	{
-		path: '/signup',
-		route: Signup,
+		path: '/admin',
+		route: Admin,
 	},
 	{
 		path: '/user',
