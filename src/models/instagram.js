@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Instagram = mongoose.Schema({
 	email: {type: String, required: true},
 	package: {type: String, required: true},
+	status: {type: String, default: 'Live', required: true},
 	followers: {type: Number, required: true},
 	followers_gained: {type: Number, required: true},
 	follow_requests: {type: Number, required: true},

@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 const Facebook = mongoose.Schema({
 	email: {type: String, required: true},
 	package: {type: String, required: true},
+	status: {type: String, default: 'Live', required: true},
 	post_details: {type: String, required: true},
 	posts: {type: Number, required: true},
+	followers: {type: Number, required: true},
 	createdAt: {type: Date, required: true},
 	updatedAt: {type: Date, required: true},
 })
