@@ -3,33 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fyp-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fyp-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/email.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/email.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/reports.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/facebook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/email.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/email.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/users.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/admin.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/email.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/facebook.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/facebook.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/schemaValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/reports.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reports.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -71,11 +47,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\components\admin" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\dashboard" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\assets" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\utils" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\Final-Year-Project-Connectex\src\utils" />
-      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\Final-Year-Project-Connectex\src\components\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\utils" />
@@ -121,7 +97,8 @@
       <workItem from="1622557337573" duration="283000" />
       <workItem from="1622559326628" duration="2113000" />
       <workItem from="1622585075476" duration="6570000" />
-      <workItem from="1622594612112" duration="19506000" />
+      <workItem from="1622594612112" duration="19606000" />
+      <workItem from="1622647126183" duration="6817000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>

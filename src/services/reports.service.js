@@ -1,4 +1,4 @@
-const {Facebook, Instagram} = require('../models');
+const {Facebook, Instagram, FacebookPosts} = require('../models');
 const CsvParser = require('json2csv').Parser;
 
 const generateReports = async (req) => {
@@ -11,6 +11,13 @@ const generateReports = async (req) => {
 		await facebook.forEach(obj => {
 			const {id, email, package: pack, post_details, followers, posts, createdAt, updatedAt} = obj;
 			reports.push({id, email, pack, post_details, followers, posts, createdAt, updatedAt});
+		});
+	}
+	const facebookPosts = await FacebookPosts.find({email: email});
+	if (facebookPosts) {
+		await facebookPosts.forEach(obj => {
+			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
+			reports.push({post_details, id, email, pack, createdAt, updatedAt});
 		});
 	}
 	const instagram = await Instagram.find({email: email});
