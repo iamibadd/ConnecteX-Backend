@@ -24,4 +24,14 @@ const adminValidation = body => {
 	})
 	return schema.validate(body)
 }
-module.exports = {userValidation, adminValidation};
+
+const paymentValidation = body => {
+	const schema = Joi.object({
+		email: Joi.string().email().required(),
+		pack: Joi.string().required(),
+		card_number: Joi.string().required().length(16),
+		amount: Joi.number().required(),
+	})
+	return schema.validate(body)
+}
+module.exports = {userValidation, adminValidation, paymentValidation};

@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const routes = require('./src/routes');
 mongoose.connect(process.env.DB_CONNECTION,
-	{useUnifiedTopology: true, useNewUrlParser: true}, (err, client) => {
+	{useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false}, (err, client) => {
 		if (err) return console.log(err)
 		console.log('Connected to db')
 	})

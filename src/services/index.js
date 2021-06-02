@@ -4,3 +4,4 @@ module.exports.InstagramService = require('./instagram.service');
 module.exports.FacebookService = require('./facebook.service');
 module.exports.EmailService = require('./email.service');
 module.exports.ReportsService = require('./reports.service');
+module.exports.PaymentService = require('./payment.service');

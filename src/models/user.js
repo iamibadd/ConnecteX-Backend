@@ -7,6 +7,7 @@ const User = mongoose.Schema({
 	email: {type: String, required: true},
 	package: {type: String, default: 'Silver', required: true},
 	status: {type: String, default: 'Live', required: true},
+	payment: {type: Boolean, default: false, required: true},
 	password: {type: String, required: true},
 	confirm_password: {type: String, required: true},
 }, {timestamps: true});

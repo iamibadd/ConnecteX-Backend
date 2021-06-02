@@ -1,7 +1,7 @@
 const {Admin} = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const {adminValidation} = require('../validation/signup');
+const {adminValidation} = require('../validation/schemaValidation');
 
 const register = async (req) => {
 	const {error} = adminValidation(req.body);
