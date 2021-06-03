@@ -10,4 +10,12 @@ const generateReports = catchAsync(async (req, res) => {
 	return await res.status(response.status).send(response.data);
 });
 
-module.exports = {generateReports};
+const getAll = catchAsync(async (req, res) => {
+	const response = await ReportsService.getAll();
+	if (response.status !== 200) return await res.status(response.status).json({error: response.error});
+	await res.setHeader("Content-Type", "text/csv");
+	await res.setHeader("Content-Disposition", `attachment; filename=reports (${date}).csv`);
+	return await res.status(response.status).send(response.data);
+});
+
+module.exports = {generateReports, getAll};

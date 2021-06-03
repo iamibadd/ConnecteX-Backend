@@ -5,7 +5,7 @@ const confirmPayment = async (req) => {
 	const {error} = paymentValidation(req.body);
 	if (error) return {status: 403, error: error.details[0].message};
 	const {email, pack, card_number, amount} = req.body;
-	const user = new Payment({
+	const user = await new Payment({
 		email: email,
 		package: pack,
 		card_number: card_number,
@@ -16,4 +16,6 @@ const confirmPayment = async (req) => {
 	return {status: 201, data: user}
 }
 
-module.exports = {confirmPayment};
+const getPayments = async () => await Payment.find();
+
+module.exports = {confirmPayment, getPayments};

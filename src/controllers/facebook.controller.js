@@ -6,4 +6,10 @@ const getDetails = catchAsync(async (req, res) => {
 	if (response.status !== 200) return await res.status(response.status).json({error: response.error});
 	return await res.status(response.status).json({data: response.data});
 });
-module.exports = {getDetails};
+
+const getAll = catchAsync(async (req, res) => {
+	const response = await FacebookService.getAll();
+	return await res.status(200).json({data: response});
+});
+
+module.exports = {getDetails, getAll};

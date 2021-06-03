@@ -11,4 +11,10 @@ const getStats = async (req) => {
 	return {status: 200, data: data}
 }
 
-module.exports = {getStats};
+const getAll = async () => {
+	const facebook = await Facebook.find();
+	const posts = await FacebookPosts.find();
+	return {facebook: facebook, posts: posts}
+};
+
+module.exports = {getStats, getAll};

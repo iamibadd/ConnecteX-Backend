@@ -37,11 +37,33 @@ const login = async (req) => {
 
 const dashboard = async (req) => {
 	if (!req.body.hasOwnProperty('username'))
-		return {status: 403, error: 'username is a required body parameter.'};
+		return {status: 403, error: 'username is a required query parameter.'};
 	const {username} = req.params;
 	if (req.body.username !== username) return {status: 401, error: 'Unauthorized user!'};
 	const user = await User.findOne({username: username});
 	return {status: 201, data: user};
 }
 
-module.exports = {login, register, dashboard};
+const getUsers = async () => {
+	const activeUsers = await User.find({status: 'Live'});
+	const notActiveUsers = await User.find({status: 'Done'});
+	return {active: activeUsers, notActive: notActiveUsers}
+};
+
+const cancelSubscription = async (req) => {
+	if (!req.body.hasOwnProperty('email'))
+		return {status: 403, error: 'email is a required body parameter.'};
+	const {email} = req.body;
+	await User.findOneAndUpdate({email: email}, {$set: {status: 'Done'}});
+	return {status: 201, data: "Subscription cancelled."}
+};
+
+const deleteUser = async (req) => {
+	if (!req.body.hasOwnProperty('email'))
+		return {status: 403, error: 'email is a required body parameter.'};
+	const {email} = req.body;
+	await User.findOneAndDelete({email: email});
+	return {status: 200, data: "User deleted."}
+};
+
+module.exports = {login, register, dashboard, getUsers, cancelSubscription, deleteUser};

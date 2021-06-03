@@ -19,4 +19,21 @@ const dashboard = catchAsync(async (req, res) => {
 	return await res.status(response.status).json({data: response.data});
 });
 
-module.exports = {login, register, dashboard};
+const getUsers = catchAsync(async (req, res) => {
+	const response = await UserService.getUsers();
+	return await res.status(200).json({data: response});
+});
+
+const cancelSubscription = catchAsync(async (req, res) => {
+	const response = await UserService.cancelSubscription(req);
+	if (response.status !== 201) return res.status(response.status).json({error: response.error});
+	return await res.status(response.status).json({data: response.data});
+});
+
+const deleteUser = catchAsync(async (req, res) => {
+	const response = await UserService.deleteUser(req);
+	if (response.status !== 200) return res.status(response.status).json({error: response.error});
+	return await res.status(response.status).json({data: response.data});
+});
+
+module.exports = {login, register, dashboard, getUsers, cancelSubscription, deleteUser};

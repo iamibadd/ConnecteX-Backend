@@ -9,4 +9,6 @@ const getStats = async (req) => {
 	return {status: 200, data: instagram}
 }
 
-module.exports = {getStats};
+const getAll = async () => await Instagram.find();
+
+module.exports = {getStats, getAll};

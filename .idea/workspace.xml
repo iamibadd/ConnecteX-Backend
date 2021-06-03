@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/facebook.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/facebook.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/instagram.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instagram.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/payment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/payment.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/reports.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/facebook.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/facebook.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/instagram.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/instagram.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/reports.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/reports.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/users.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/email.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/facebook.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/facebook.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/instagram.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/instagram.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/payment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/payment.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/reports.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reports.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/logo-negative.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/ContextApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/ContextApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +44,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../fyp-frontend" />
   </component>
   <component name="ProjectId" id="1lemkAf6PtQNyBkIyIGSKEhkqvn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -37,20 +60,20 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fyp-frontend/src/utils" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Users\Ibad Shah\WebstormProjects\dashboard\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\utils" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\components\admin" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\dashboard" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\assets" />
-      <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\src\utils" />
       <recent name="C:\Users\Ibad Shah\WebstormProjects\fyp-frontend\Final-Year-Project-Connectex\src\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,7 +121,7 @@
       <workItem from="1622559326628" duration="2113000" />
       <workItem from="1622585075476" duration="6570000" />
       <workItem from="1622594612112" duration="19606000" />
-      <workItem from="1622647126183" duration="6817000" />
+      <workItem from="1622647126183" duration="38523000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
