@@ -1,7 +1,7 @@
-const {User} = require('../models');
+const {User, Credential} = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const {userValidation} = require('../validation/schemaValidation');
+const {userValidation, credentialsValidation} = require('../validation/schemaValidation');
 
 const register = async (req) => {
 	const {error} = userValidation(req.body);
@@ -28,7 +28,7 @@ const login = async (req) => {
 	if (!req.body.hasOwnProperty('username') || !req.body.hasOwnProperty('password'))
 		return {status: 403, error: 'username and password are required body parameters.'}
 	const {username, password} = req.body;
-	const user = await User.findOne({username: username});
+	const user = await User.findOne({username: username, status: 'Live'});
 	if (!user) return {status: 403, error: 'Invalid username.'}
 	const pass = await bcrypt.compare(password, user.password);
 	if (!pass) return {status: 403, error: 'Invalid password.'}
@@ -66,4 +66,31 @@ const deleteUser = async (req) => {
 	return {status: 200, data: "User deleted."}
 };
 
-module.exports = {login, register, dashboard, getUsers, cancelSubscription, deleteUser};
+const saveCredentials = async (req) => {
+	const {error} = credentialsValidation(req.body);
+	if (error) return {status: 403, error: error.details[0].message};
+	const {
+		username, niche, pack, facebook, facebook_password, instagram, instagram_password,
+		linkedin, linkedin_password, twitter, twitter_password
+	} = req.body;
+	const credentials = new Credential({
+		username, niche, pack,facebook, facebook_password, instagram, instagram_password, linkedin, linkedin_password,
+		twitter, twitter_password
+	});
+	await User.findOneAndUpdate({username: username}, {$set: {credentials: true}});
+	await credentials.save();
+	return {status: 201, data: credentials}
+};
+
+const getCredentials = async (req) => await Credential.findOne({username: req.query.username});
+
+module.exports = {
+	login,
+	register,
+	dashboard,
+	getUsers,
+	cancelSubscription,
+	deleteUser,
+	saveCredentials,
+	getCredentials
+};

@@ -3,4 +3,7 @@ module.exports.Admin = require('./admin');
 module.exports.Instagram = require('./instagram');
 module.exports.Facebook = require('./facebook');
 module.exports.FacebookPosts = require('./facebookposts');
+module.exports.Linkedin = require('./linkedin');
+module.exports.LinkedinPosts = require('./linkedinposts');
 module.exports.Payment = require('./payment');
+module.exports.Credential = require('./credentials');

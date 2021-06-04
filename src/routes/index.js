@@ -4,6 +4,7 @@ const Admin = require('./admin.route');
 const User = require('./users.route');
 const Instagram = require('./instagram.route');
 const Facebook = require('./facebook.route');
+const Linkedin = require('./linkedin.route');
 const Email = require('./email.route');
 const Reports = require('./reports.route');
 
@@ -23,6 +24,10 @@ const defaultRoutes = [
 	{
 		path: '/facebook',
 		route: Facebook,
+	},
+	{
+		path: '/linkedin',
+		route: Linkedin,
 	},
 	{
 		path: '/email',

@@ -36,4 +36,24 @@ const deleteUser = catchAsync(async (req, res) => {
 	return await res.status(response.status).json({data: response.data});
 });
 
-module.exports = {login, register, dashboard, getUsers, cancelSubscription, deleteUser};
+const saveCredentials = catchAsync(async (req, res) => {
+	const response = await UserService.saveCredentials(req);
+	if (response.status !== 201) return res.status(response.status).json({error: response.error});
+	return await res.status(response.status).json({data: response.data});
+});
+
+const getCredentials = catchAsync(async (req, res) => {
+	const response = await UserService.getCredentials(req);
+	return await res.status(200).json({data: response});
+});
+
+module.exports = {
+	login,
+	register,
+	dashboard,
+	getUsers,
+	cancelSubscription,
+	deleteUser,
+	saveCredentials,
+	getCredentials
+};

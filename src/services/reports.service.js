@@ -1,4 +1,4 @@
-const {Facebook, Instagram, FacebookPosts} = require('../models');
+const {Facebook, Instagram, FacebookPosts, Linkedin, LinkedinPosts} = require('../models');
 const CsvParser = require('json2csv').Parser;
 
 const generateReports = async (req) => {
@@ -16,6 +16,20 @@ const generateReports = async (req) => {
 	const facebookPosts = await FacebookPosts.find({email: email});
 	if (facebookPosts) {
 		await facebookPosts.forEach(obj => {
+			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
+			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+		});
+	}
+	const linkedin = await Linkedin.find({email: email});
+	if (linkedin) {
+		await linkedin.forEach(obj => {
+			const {id, email, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			reports.push({id, email, pack, connections, gained, requests, createdAt, updatedAt});
+		});
+	}
+	const linkedinPosts = await LinkedinPosts.find({email: email});
+	if (linkedinPosts) {
+		await linkedinPosts.forEach(obj => {
 			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
 			reports.push({post_details, id, email, pack, createdAt, updatedAt});
 		});
@@ -47,6 +61,20 @@ const getAll = async () => {
 	const facebookPosts = await FacebookPosts.find();
 	if (facebookPosts) {
 		await facebookPosts.forEach(obj => {
+			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
+			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+		});
+	}
+	const linkedin = await Linkedin.find();
+	if (linkedin) {
+		await linkedin.forEach(obj => {
+			const {id, email, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			reports.push({id, email, pack, connections, gained, requests, createdAt, updatedAt});
+		});
+	}
+	const linkedinPosts = await LinkedinPosts.find();
+	if (linkedinPosts) {
+		await linkedinPosts.forEach(obj => {
 			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
 			reports.push({post_details, id, email, pack, createdAt, updatedAt});
 		});

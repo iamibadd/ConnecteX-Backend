@@ -7,9 +7,9 @@ const confirmationPayment = catchAsync(async (req, res) => {
 	return await res.status(response.status).json({data: response.data});
 });
 
-const getPayment = catchAsync(async (req, res) => {
+const getPayments = catchAsync(async (req, res) => {
 	const response = await PaymentService.getPayments();
 	return await res.status(200).json({data: response});
 });
 
-module.exports = {confirmationPayment, getPayment};
+module.exports = {confirmationPayment, getPayments};

@@ -5,30 +5,35 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/facebook.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/facebook.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/instagram.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instagram.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/payment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/payment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/reports.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/reports.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/facebook.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/facebook.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/instagram.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/instagram.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/reports.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/reports.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/users.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/email.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/email.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/facebook.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/facebook.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/instagram.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/instagram.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/payment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/payment.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/reports.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reports.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/schemaValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/schemaValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/assets/icons/logo-negative.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/ActiveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/ActiveUsers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Transactions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Payment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/routes.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/ContextApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/ContextApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +126,12 @@
       <workItem from="1622559326628" duration="2113000" />
       <workItem from="1622585075476" duration="6570000" />
       <workItem from="1622594612112" duration="19606000" />
-      <workItem from="1622647126183" duration="38523000" />
+      <workItem from="1622647126183" duration="38734000" />
+      <workItem from="1622730101301" duration="24000" />
+      <workItem from="1622737316640" duration="128000" />
+      <workItem from="1622737619007" duration="1474000" />
+      <workItem from="1622749743664" duration="11971000" />
+      <workItem from="1622762444532" duration="18717000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
