@@ -18,7 +18,7 @@ const confirmPayment = async (req) => {
 				return stripe.paymentIntents.create({
 					payment_method: id,
 					amount: String(amount) + String('00'),
-					description: `Connectex ${pack} Subscription`,
+					description: `Connectex ${pack} Package Subscription.`,
 					currency: 'USD',
 					customer: customer.id
 				});
