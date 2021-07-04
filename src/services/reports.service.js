@@ -3,47 +3,92 @@ const CsvParser = require('json2csv').Parser;
 
 const generateReports = async (req) => {
 	let reports = [];
-	if (!req.query.hasOwnProperty('email'))
-		return {status: 403, error: 'email is a required query parameters.'}
-	const {email} = req.query;
-	const facebook = await Facebook.find({email: email});
+	if (!req.query.hasOwnProperty('user'))
+		return {status: 403, error: 'user is a required query parameters.'}
+	const {user} = req.query;
+	const facebook = await Facebook.find({user: user});
 	if (facebook) {
 		await facebook.forEach(obj => {
-			const {id, email, package: pack, post_details, followers, posts, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, post_details, followers, posts, createdAt, updatedAt});
+			const {id, package: pack, posts, friends, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Facebook',
+				'Package': pack,
+				'Friends': friends,
+				'Posts': posts,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
-	const facebookPosts = await FacebookPosts.find({email: email});
+	const facebookPosts = await FacebookPosts.find({user: user});
 	if (facebookPosts) {
 		await facebookPosts.forEach(obj => {
-			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
-			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Facebook',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
-	const linkedin = await Linkedin.find({email: email});
+	const linkedin = await Linkedin.find({user: user});
 	if (linkedin) {
 		await linkedin.forEach(obj => {
-			const {id, email, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, connections, gained, requests, createdAt, updatedAt});
+			const {id, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Linkedin',
+				'Package': pack,
+				'Connections': connections,
+				'Followers Gained': gained,
+				'Follow Requests': requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
-	const linkedinPosts = await LinkedinPosts.find({email: email});
+	const linkedinPosts = await LinkedinPosts.find({user: user});
 	if (linkedinPosts) {
 		await linkedinPosts.forEach(obj => {
-			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
-			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Linkedin',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
-	const instagram = await Instagram.find({email: email});
+	const instagram = await Instagram.find({user: user});
 	if (instagram) {
 		await instagram.forEach(obj => {
-			const {id, email, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, followers, followers_gained, follow_requests, createdAt, updatedAt});
+			const {id, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Instagram',
+				'Package': pack,
+				'Followers': followers,
+				'Followers Gained': followers_gained,
+				'Follow Requests': follow_requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	if (reports.length < 1) return {status: 401, error: 'Email not found!'}
-	const csvFields = ["Id", "Email", "Package", "Posts", "Post Titles", "Followers",
-		"Followers Gained", "Followers Requested", "CreatedAt", "UpdatedAt"];
+	const csvFields = ["Id", "Email", "Platform", "Package", "Posts", "Post Details", "Followers",
+		"Followers Gained", "Follow Requests", "Created at", "Updated at"];
 	const csvParser = new CsvParser({csvFields});
 	const csvData = csvParser.parse(reports);
 	return {status: 200, data: csvData}
@@ -54,41 +99,86 @@ const getAll = async () => {
 	const facebook = await Facebook.find();
 	if (facebook) {
 		await facebook.forEach(obj => {
-			const {id, email, package: pack, post_details, followers, posts, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, post_details, followers, posts, createdAt, updatedAt});
+			const {id, package: pack, posts, friends, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Facebook',
+				'Package': pack,
+				'Friends': friends,
+				'Posts': posts,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	const facebookPosts = await FacebookPosts.find();
 	if (facebookPosts) {
 		await facebookPosts.forEach(obj => {
-			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
-			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Facebook',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	const linkedin = await Linkedin.find();
 	if (linkedin) {
 		await linkedin.forEach(obj => {
-			const {id, email, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, connections, gained, requests, createdAt, updatedAt});
+			const {id, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Linkedin',
+				'Package': pack,
+				'Connections': connections,
+				'Followers Gained': gained,
+				'Follow Requests': requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	const linkedinPosts = await LinkedinPosts.find();
 	if (linkedinPosts) {
 		await linkedinPosts.forEach(obj => {
-			const {post_details, id, email, package: pack, createdAt, updatedAt} = obj;
-			reports.push({post_details, id, email, pack, createdAt, updatedAt});
+			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Linkedin',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	const instagram = await Instagram.find();
 	if (instagram) {
 		await instagram.forEach(obj => {
-			const {id, email, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
-			reports.push({id, email, pack, followers, followers_gained, follow_requests, createdAt, updatedAt});
+			const {id, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Instagram',
+				'Package': pack,
+				'Followers': followers,
+				'Followers Gained': followers_gained,
+				'Follow Requests': follow_requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
 		});
 	}
 	if (reports.length < 1) return {status: 401, error: 'Email not found!'}
-	const csvFields = ["Id", "Email", "Package", "Posts", "Post Titles", "Followers",
-		"Followers Gained", "Followers Requested", "CreatedAt", "UpdatedAt"];
+	const csvFields = ["Id", "Email", "Platform", "Package", "Posts", "Post Details", "Followers",
+		"Followers Gained", "Follow Requests", "Created at", "Updated at"];
 	const csvParser = new CsvParser({csvFields});
 	const csvData = csvParser.parse(reports);
 	return {status: 200, data: csvData}

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const Instagram = mongoose.Schema({
+	user: {type: String, required: true},
 	username: {type: String, required: true},
 	package: {type: String, required: true},
 	status: {type: String, default: 'Live', required: true},
