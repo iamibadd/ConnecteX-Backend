@@ -1,7 +1,8 @@
-const {User, Credential} = require('../models');
+const {User, Credential, Facebook, FacebookPosts, Linkedin, LinkedinPosts, Instagram} = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {userValidation, credentialsValidation} = require('../validation/schemaValidation');
+const date = new Date();
 
 const register = async (req) => {
 	const {error} = userValidation(req.body);
@@ -70,14 +71,25 @@ const saveCredentials = async (req) => {
 	const {error} = credentialsValidation(req.body);
 	if (error) return {status: 403, error: error.details[0].message};
 	const {
-		username, niche, pack, facebook, facebook_password, instagram, instagram_password,
+		username, niche, user, pack, facebook, facebook_password, instagram, instagram_password,
 		linkedin, linkedin_password, twitter, twitter_password
 	} = req.body;
 	const credentials = new Credential({
-		username, niche, pack,facebook, facebook_password, instagram, instagram_password, linkedin, linkedin_password,
+		username, niche, pack, facebook, facebook_password, instagram, instagram_password, linkedin, linkedin_password,
 		twitter, twitter_password
 	});
 	await User.findOneAndUpdate({username: username}, {$set: {credentials: true}});
+	await Facebook({
+		user: user, package: pack, email: facebook, posts: 0, friends: 0, createdAt: date, updatedAt: date
+	}).save();
+	await Instagram({
+		user: user, package: pack, username: instagram, followers: 0, followers_gained: 0,
+		follow_requests: 0, createdAt: date, updatedAt: date
+	}).save();
+	await Linkedin({
+		user: user, package: pack, email: linkedin, posts: 0, connections: 0, requests: 0,
+		gained: 0, createdAt: date, updatedAt: date
+	}).save();
 	await credentials.save();
 	return {status: 201, data: credentials}
 };

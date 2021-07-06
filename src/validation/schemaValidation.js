@@ -40,6 +40,7 @@ const paymentValidation = body => {
 const credentialsValidation = body => {
 	const schema = Joi.object({
 		username: Joi.string().required(),
+		user: Joi.string().required(),
 		niche: Joi.string().required(),
 		pack: Joi.string().required(),
 		facebook: Joi.string().required(),
