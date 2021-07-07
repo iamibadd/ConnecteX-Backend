@@ -10,6 +10,9 @@ const confirmationEmail = async (req) => {
 		auth: {
 			user: process.env.EMAIL,
 			pass: process.env.PASSWORD
+		},
+		tls: {
+			rejectUnauthorized: false
 		}
 	});
 	const message = `Hi <strong> ${first_name} ${last_name} </strong>, <br>
@@ -35,6 +38,9 @@ const paymentEmail = async (req) => {
 		auth: {
 			user: process.env.EMAIL,
 			pass: process.env.PASSWORD
+		},
+		tls: {
+			rejectUnauthorized: false
 		}
 	});
 	const message = `Hi <strong> ${first_name} ${last_name} </strong>, <br>
