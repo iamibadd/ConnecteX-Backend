@@ -1,4 +1,4 @@
-const {Facebook, Instagram, FacebookPosts, Linkedin, LinkedinPosts} = require('../models');
+const {Facebook, Instagram, FacebookPosts, Linkedin, LinkedinPosts, Twitter, TwitterPosts} = require('../models');
 const CsvParser = require('json2csv').Parser;
 
 const generateReports = async (req) => {
@@ -40,12 +40,13 @@ const generateReports = async (req) => {
 	const linkedin = await Linkedin.find({user: user});
 	if (linkedin) {
 		await linkedin.forEach(obj => {
-			const {id, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			const {id, package: pack, posts, connections, gained, requests, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
 				'Platform': 'Linkedin',
 				'Package': pack,
+				'Posts': posts,
 				'Connections': connections,
 				'Followers Gained': gained,
 				'Follow Requests': requests,
@@ -86,6 +87,39 @@ const generateReports = async (req) => {
 			});
 		});
 	}
+	const twitter = await Twitter.find({user: user});
+	if (twitter) {
+		await twitter.forEach(obj => {
+			const {id, user, package: pack, posts, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Twitter',
+				'Package': pack,
+				'Followers': followers,
+				'Posts': posts,
+				'Followers Gained': followers_gained,
+				'Follow Requests': follow_requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
+		});
+	}
+	const twitterPosts = await TwitterPosts.find({user: user});
+	if (twitterPosts) {
+		await twitterPosts.forEach(obj => {
+			const {id, user, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Twitter',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
+		});
+	}
 	if (reports.length < 1) return {status: 401, error: 'Email not found!'}
 	const csvFields = ["Id", "Email", "Platform", "Package", "Posts", "Post Details", "Followers",
 		"Followers Gained", "Follow Requests", "Created at", "Updated at"];
@@ -99,7 +133,7 @@ const getAll = async () => {
 	const facebook = await Facebook.find();
 	if (facebook) {
 		await facebook.forEach(obj => {
-			const {id, package: pack, posts, friends, createdAt, updatedAt} = obj;
+			const {id, user, package: pack, posts, friends, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
@@ -115,7 +149,7 @@ const getAll = async () => {
 	const facebookPosts = await FacebookPosts.find();
 	if (facebookPosts) {
 		await facebookPosts.forEach(obj => {
-			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			const {id, user, package: pack, post_details, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
@@ -130,12 +164,13 @@ const getAll = async () => {
 	const linkedin = await Linkedin.find();
 	if (linkedin) {
 		await linkedin.forEach(obj => {
-			const {id, package: pack, connections, gained, requests, createdAt, updatedAt} = obj;
+			const {id, user, package: pack, posts, connections, gained, requests, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
 				'Platform': 'Linkedin',
 				'Package': pack,
+				'Posts': posts,
 				'Connections': connections,
 				'Followers Gained': gained,
 				'Follow Requests': requests,
@@ -147,7 +182,7 @@ const getAll = async () => {
 	const linkedinPosts = await LinkedinPosts.find();
 	if (linkedinPosts) {
 		await linkedinPosts.forEach(obj => {
-			const {id, package: pack, post_details, createdAt, updatedAt} = obj;
+			const {id, user, package: pack, post_details, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
@@ -162,7 +197,7 @@ const getAll = async () => {
 	const instagram = await Instagram.find();
 	if (instagram) {
 		await instagram.forEach(obj => {
-			const {id, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
+			const {id, user, package: pack, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
 			reports.push({
 				'Id': id,
 				'User': user,
@@ -176,8 +211,41 @@ const getAll = async () => {
 			});
 		});
 	}
+	const twitter = await Twitter.find();
+	if (twitter) {
+		await twitter.forEach(obj => {
+			const {id, user, package: pack, posts, followers, followers_gained, follow_requests, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Twitter',
+				'Package': pack,
+				'Followers': followers,
+				'Posts': posts,
+				'Followers Gained': followers_gained,
+				'Follow Requests': follow_requests,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
+		});
+	}
+	const twitterPosts = await TwitterPosts.find();
+	if (twitterPosts) {
+		await twitterPosts.forEach(obj => {
+			const {id, user, package: pack, post_details, createdAt, updatedAt} = obj;
+			reports.push({
+				'Id': id,
+				'User': user,
+				'Platform': 'Twitter',
+				'Package': pack,
+				'Post Details': post_details,
+				'Created at': createdAt,
+				'Updated at': updatedAt
+			});
+		});
+	}
 	if (reports.length < 1) return {status: 401, error: 'Email not found!'}
-	const csvFields = ["Id", "Email", "Platform", "Package", "Posts", "Post Details", "Followers",
+	const csvFields = ["Id", "User", "Platform", "Package", "Posts", "Post Details", "Followers",
 		"Followers Gained", "Follow Requests", "Created at", "Updated at"];
 	const csvParser = new CsvParser({csvFields});
 	const csvData = csvParser.parse(reports);

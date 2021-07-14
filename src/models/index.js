@@ -5,5 +5,7 @@ module.exports.Facebook = require('./facebook');
 module.exports.FacebookPosts = require('./facebookposts');
 module.exports.Linkedin = require('./linkedin');
 module.exports.LinkedinPosts = require('./linkedinposts');
+module.exports.Twitter = require('./twitter');
+module.exports.TwitterPosts = require('./twitterposts');
 module.exports.Payment = require('./payment');
 module.exports.Credential = require('./credentials');

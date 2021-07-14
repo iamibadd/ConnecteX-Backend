@@ -9,8 +9,7 @@ router.route('/cancel-subscription').post(UserController.cancelSubscription);
 router.route('/delete').delete(UserController.deleteUser);
 router.route('/payment').post(PaymentController.confirmationPayment);
 router.route('/payment/all').get(PaymentController.getPayments);
-router.route('/credentials').get(UserController.getCredentials);
-router.route('/credentials').post(UserController.saveCredentials);
+router.route('/credentials').get(UserController.getCredentials).post(UserController.saveCredentials);
 router.route('/:username').post(verify_token, UserController.dashboard);
 
 module.exports = router;

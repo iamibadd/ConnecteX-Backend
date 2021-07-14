@@ -1,4 +1,4 @@
-const {User, Credential, Facebook, FacebookPosts, Linkedin, LinkedinPosts, Instagram} = require('../models');
+const {User, Credential, Facebook, Linkedin, Instagram, Twitter} = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {userValidation, credentialsValidation} = require('../validation/schemaValidation');
@@ -89,6 +89,10 @@ const saveCredentials = async (req) => {
 	await Linkedin({
 		user: user, package: pack, email: linkedin, posts: 0, connections: 0, requests: 0,
 		gained: 0, createdAt: date, updatedAt: date
+	}).save();
+	await Twitter({
+		user: user, package: pack, username: twitter, posts: 0, followers: 0, followers_gained: 0, follow_requests: 0,
+		createdAt: date, updatedAt: date
 	}).save();
 	await credentials.save();
 	return {status: 201, data: credentials}
