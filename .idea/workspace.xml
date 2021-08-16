@@ -3,37 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/payment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/payment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/users.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/users.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/instagram.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/instagram.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/payment.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/payment.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/reports.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reports.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validation/schemaValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validation/schemaValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/ActiveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/ActiveUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/AdminDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/admin/Transactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/components/user/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/scss/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fyp-frontend/src/utils/WidgetsBrand.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../fyp-frontend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lemkAf6PtQNyBkIyIGSKEhkqvn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -64,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.9" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../fyp-frontend/src/utils" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -132,6 +101,9 @@
       <workItem from="1622737619007" duration="1474000" />
       <workItem from="1622749743664" duration="11971000" />
       <workItem from="1622762444532" duration="18717000" />
+      <workItem from="1629074574933" duration="8258000" />
+      <workItem from="1629083464238" duration="447000" />
+      <workItem from="1629125102911" duration="8786000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
@@ -173,6 +145,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.dockerignore" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

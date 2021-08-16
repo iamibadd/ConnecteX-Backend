@@ -1,0 +1,17 @@
+version: '3'
+services:
+  fyp: # service name
+    container_name: fyp-container # container name aka --name
+    image: fyp-backend:1.0 # image name:tag
+    build: . # build source file location
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env # two ways of setting env variables
+#    environment:
+#      PORT: ${PORT}
+#      DB_CONNECTION: ${DB_CONNECTION}
+
+# docker-compose -f docker-compose.yml up
+# docker-compose -f docker-compose.yml up -d
+# docker-compose -f docker-compose.yml up -d --build
