@@ -4,14 +4,19 @@ services:
     container_name: fyp-container # container name aka --name
     image: fyp-backend:1.0 # image name:tag
     build: . # build source file location
+    restart: always # restart the container if it crashes for any reason
     ports:
-      - "5000:5000"
+      - "5000:5000" # OS port : Docker port
     env_file:
       - .env # two ways of setting env variables
 #    environment:
 #      PORT: ${PORT}
 #      DB_CONNECTION: ${DB_CONNECTION}
-
-# docker-compose -f docker-compose.yml up
-# docker-compose -f docker-compose.yml up -d
+    volumes: # any change in the working directory will be reflected in docker. if . doesn't work, use "$PWD/." .
+      - .:.
+# used to start and build a service
 # docker-compose -f docker-compose.yml up -d --build
+# used to start a container
+# docker-compose -f docker-compose.yml up
+# used to start a container in detached mode
+# docker-compose -f docker-compose.yml up -d

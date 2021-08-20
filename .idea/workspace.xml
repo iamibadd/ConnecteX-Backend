@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="36f3e821-845e-463e-abae-7fa8a1b7f4ec" name="Default Changelist" comment="JWT authentication added!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,11 @@
       <workItem from="1622762444532" duration="18717000" />
       <workItem from="1629074574933" duration="8258000" />
       <workItem from="1629083464238" duration="447000" />
-      <workItem from="1629125102911" duration="8786000" />
+      <workItem from="1629125102911" duration="9836000" />
+      <workItem from="1629318230259" duration="5256000" />
+      <workItem from="1629382434095" duration="44000" />
+      <workItem from="1629397302426" duration="3755000" />
+      <workItem from="1629493303584" duration="1171000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608073408821</created>
