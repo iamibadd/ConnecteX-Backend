@@ -15,9 +15,11 @@ STRIPE_SECRET_KEY= replace with your Stripe token
 ```
 
 ### Installing dependencies
-
+```
 npm install
+```
 
-### Starting the server
-
+### Running the server
+```
 npm start
+```
