@@ -1,0 +1,184 @@
+module.exports = swaggerDefinition = {
+	"swagger": "2.0",
+	"info": {
+		"title": "ConnecteX Backend Documentation",
+		"description": "A very basic Swagger documentation for ConnecteX.",
+		"version": "1.0.0"
+	},
+	// "host": "connectexbackend.herokuapp.com",
+	"host": "localhost:5000",
+	"tags": [
+		{
+			"name": "user",
+			"description": "Users record"
+		}
+	],
+	"schemes": [
+		"http",
+		"https",
+	],
+	"paths": {
+		"/user/register": {
+			"post": {
+				"tags": [
+					"user"
+				],
+				"description": "Add a user",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "User added successfully!"
+					},
+					"400": {
+						"description": "Invalid data!"
+					}
+				}
+			}
+		},
+		"/user/all": {
+			"get": {
+				"tags": [
+					"user"
+				],
+				"description": "Get all users",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "On Success",
+						"schema": {
+							"$ref": "#/definitions/UserAllResponse"
+						}
+					},
+					"400": {
+						"description": "Request failed :("
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"User": {
+			"type": "object",
+			"properties": {
+				"first_name": {
+					"type": "string"
+				},
+				"last_name": {
+					"type": "string"
+				},
+				"username": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"package": {
+					"type": "string",
+					"default": "Silver",
+					"enum": [
+						"Silver",
+						"Platinum",
+						"Diamond"
+					]
+				},
+				"status": {
+					"type": "string",
+					"default": "Live",
+					"enum": [
+						"Live",
+						"Completed"
+					]
+				},
+				"credentials": {
+					"type": "boolean",
+					"default": false,
+					"enum": [
+						true,
+						false
+					]
+				},
+				"payment": {
+					"type": "boolean",
+					"default": false,
+					"enum": [
+						true,
+						false
+					]
+				},
+				"password": {
+					"type": "string"
+				},
+				"confirm_password": {
+					"type": "string"
+				}
+			},
+			"example": {
+				"first_name": "FirstName",
+				"last_name": "LastName",
+				"username": "username",
+				"email": "uemail@gmail.com",
+				"package": "Silver",
+				"status": "Live",
+				"credentials": false,
+				"payment": false,
+				"password": "abcd1234",
+				"confirm_password": "abcd1234"
+			}
+		},
+		"UserAllResponse": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "object",
+					"example": {
+						"active": [
+							{
+								"package": "Platinum",
+								"status": "Live",
+								"credentials": true,
+								"payment": true,
+								"_id": "60b9670dbaa445180c678036",
+								"first_name": "Stones",
+								"last_name": "Cave",
+								"username": "stonesncave",
+								"email": "stonesncaves@gmail.com",
+								"createdAt": "2021-06-03T23:34:37.338Z",
+								"updatedAt": "2021-07-14T07:25:50.022Z"
+							}
+						],
+						"not_active": [
+							{
+								"package": "Silver",
+								"status": "Done",
+								"credentials": false,
+								"payment": true,
+								"_id": "60b9ee228067d91f54ca1970",
+								"first_name": "Anas",
+								"last_name": "Nisar",
+								"username": "anasnisar",
+								"email": "anasnisar@gmail.com",
+								"createdAt": "2021-06-04T09:10:58.433Z",
+								"updatedAt": "2021-06-04T09:10:58.433Z"
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}
