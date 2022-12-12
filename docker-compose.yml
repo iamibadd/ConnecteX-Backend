@@ -12,8 +12,12 @@ services:
 #    environment:
 #      PORT: ${PORT}
 #      DB_CONNECTION: ${DB_CONNECTION}
-    volumes: # any change in the working directory will be reflected in docker. if . doesn't work, use "$PWD/." .
-      - .:.
+    volumes: # any change in the working directory will be reflected in docker
+      # for mac
+      - $PWD/src:/app/src
+      - $PWD/package.json:/app/package.json
+#       # for windows
+#       - ./src:/app/src
 # used to start and build a service
 # docker-compose -f docker-compose.yml up -d --build
 # used to start a container
