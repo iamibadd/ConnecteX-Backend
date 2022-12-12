@@ -23,4 +23,9 @@ CMD ["npm", "start"]
 # docker exec containerId stop
 # docker kill --signal=SIGTERM containerId
 # docker stop -t time containerId
-# docker container prune
+# stop all containers
+# docker stop $(docker ps -aq)
+# remove all containers
+# docker rm $(docker ps -aq)
+# remove all images
+# docker rmi $(docker images -q)
