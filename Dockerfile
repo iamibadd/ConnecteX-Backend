@@ -1,20 +1,28 @@
-FROM node:18-alpine
+# # mac m1 chip
+# FROM --platform=linux/amd64 node:18.12.1-alpine3.16
+# any other machines
+FROM node:18.12.1-alpine3.16
 # best practice
 USER root
 # execution folder
-WORKDIR ./app
+WORKDIR /app
+# docker node modules path
+ENV PATH /app/node_modules/.bin:$PATH
 # port
-ENV PORT 5000
+ENV PORT 80
 # look for any change in package.json file and then only run the below two commands
-COPY package.json .
+COPY package.json /app/package.json
 # install latest node version
 RUN npm -g install npm@latest
 # install dependencies
 RUN npm install
 # copy all files from host to source (container)
-COPY . .
+COPY . /app
 # starts the application
 CMD ["npm", "start"]
+
+# see running container directories
+# docker exec -it kind_goldberg /bin/sh
 # -t means name of your image : means a tag or version . means DockerFile is in current directory
 # docker build -t fyp-backend:1.0 .
 # docker run -p osPort:dockerPort imageId
