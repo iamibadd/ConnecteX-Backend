@@ -6,6 +6,8 @@ FROM node:18.12.1-alpine3.16
 USER root
 # execution folder
 WORKDIR /app
+# copy all files from host to source (container)
+COPY . /app
 # docker node modules path
 ENV PATH /app/node_modules/.bin:$PATH
 # port
@@ -16,8 +18,6 @@ COPY package.json /app/package.json
 RUN npm -g install npm@latest
 # install dependencies
 RUN npm install
-# copy all files from host to source (container)
-COPY . /app
 # starts the application
 CMD ["npm", "start"]
 
